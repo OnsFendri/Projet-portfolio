@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Petit portfolio visant l'acquisition des bases de HTML et CSS.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav id="myTopnav" class="topnav">
+            <span>Ons Fendri</span>
+            <a href="#profil">Accueil</a>
+            <a href="#edito">À propos</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="toogleResponsive()" aria-label="menu burger">
+                <em class="fa fa-bars"></em>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="profil">
+            <img id="photo" src="images/Avatar1.png" alt="mon avatar" />
+        </section>
+        <section id="edito" class="slideshow-container">
+
+            <!-- Le diaporama -->
+            <div class="Slider">
+                <img src="images/chat1.jpg" alt="img1" class="img_Slider active" />
+                <img src="images/chat2.jpg" alt="img2" class="img_Slider" />
+                <img src="images/chat3.jpg" alt="img3" class="img_Slider" />
+                <img src="images/chat4.jpg" alt="img5" class="img_Slider" />
+                <img src="images/chat5.jpg" alt="img5" class="img_Slider" />
+                <img src="images/chat6.jpg" alt="img5" class="img_Slider" />
+                <img src="images/chat7.jpg" alt="img5" class="img_Slider" />
+
+                <div class="suivant">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
+                <div class="precedent">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </div>    
+            </div>
+            <script src="app.js"></script>
+            <!-- les points de navigation -->
+
+
+            <div style="text-align: center"></div>
+                
+        </section>
+        <section id="projets">
+            <div class="flip-box" id="projet1">
+                <div class="flip-box-inner" style="background-image: url(images/chat1_c.jpg);">
+                    <div class="flip-box-front"style="background-image: url(images/chat1.jpg);"> 
+                        <h2>Projet 1</h2>  
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Description du projet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box" id="projet2">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Projet 2</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Description du projet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box" id="projet3">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Projet 3</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Description du projet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box" id="projet4">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Projet 4</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Description du projet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box" id="projet5">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Projet 5</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Description du projet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box" id="projet6">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Projet 6</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <h2>Description du projet</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contactez nous</h2>
+            <form action="traitement.php" method="post">
+                <table>
+                    <tr>
+                        <td><label for="firstname">Prénom :</label></td>
+                        <td>
+                            <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastname">Nom :</label></td>
+                        <td>
+                            <input type="text" name="lastname" id="lastname" placeholder="votre nom" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Adresse mail :</label></td>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="Votre adresse mail"required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="objet">Objet du message :</label></td>
+                        <td>
+                            <input type="text" name="objet" id="objet" placeholder="Objet du message" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label for="message">Votre message :</label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" onclick="submit()" value="Envoyer" /></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="icône facebook"><em
+            class="fa-brands fa-facebook fa-5x"></em></a>
+        <a href="https://www.twitter.com/" target="_blank" aria-label="icône twitter"><em
+                class="fa-brands fa-twitter fa-5x"></em></a>
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="icône linkedin"><em
+                class="fa-brands fa-linkedin fa-5x"></em></a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="icône instagram"><em
+                class="fa-brands fa-instagram fa-5x"></em></a>
+    </footer>
+    <div id="arrow-up">
+        <a href="#" aria-label="flèche top"><em class="fa-sharp fa-solid fa-arrow-up fa-3x"></em></a>
+    </div>
+</body>
+
+</html>
