@@ -135,22 +135,7 @@ footer {
     background-color: transparent;
 }
 
-/* ______________________________ Slider ________________________________*/
-/*.slideshow-container {
-    position: relative;
-    margin: auto;
-} */
-
-/*img {
-    width: 100%;
-}  */
-
-
-/* Masquer les images par défaut */
-/*.mySlides {
-    display: none;
-} */
-
+/* ______________________________ Caroussel ________________________________*/
 
 * {
     margin: 0;
@@ -294,7 +279,7 @@ La légende
 /* Style du recto */
 .flip-box-front {
     background-color: #540b0e  ;
-    color: #e09f3e  ;
+    color: #100d0d  ;
 }
 
 /* Style du verso */
