@@ -24,7 +24,7 @@
         <p><b>Email : </b>' . $_POST['email'] . '<br>
         <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
 
-        $retour = mail('destinataire@free.fr', 'Envoi depuis page Contact', $message, $entete);
+        $retour = mail('ons.fendri@epfedu.fr', 'Envoi depuis page Contact', $message, $entete);
         if($retour)
             echo '<p>Votre message a bien été envoyé.</p>';
     }

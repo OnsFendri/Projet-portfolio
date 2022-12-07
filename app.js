@@ -45,7 +45,7 @@ jQuery(function(){
             if ($(this).scrollTop() > 200 ) {  // Quand on est à 200pixels du haut de page,
                 $('#scrollUp').css('right','10px'); // Replace à 10pixels de la droite l'image
             } else { 
-                $('#scrollUp').removeAttr( 'style' ); // Enlève les attributs CSS affectés par javascript
+                $('#scrollUp').removeAttr( 'style' ); // Enlève les attributs CSS affectés par javascript pour cacher 
             }
         });
     });
