@@ -5,23 +5,20 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;     /* Pour que le retour vers le haut de page soit fluide */
+}
+
 table {
     width: 80%;
     margin: auto;
     padding: 10px;
     border-radius: 10px;
     color: rgb#fafdfd;
-    background: #e09f3e ;
+    background: #e09f3e;
     border: 5px solid white;
 }
 
-/* td:first-child{
-    width: 30%;
-}
-
-td:last-child{
-    width: 70%;
-  } */
 td {
     width: 50%;
     padding: 5px;
@@ -53,11 +50,11 @@ input[type='button'] {
     padding: 10px;
 }
 
-input[type='button']:hover {
+/*input[type='button']:hover {
     cursor: pointer;
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
-}
+} */
 
 /* ___________________________ Menu responsive ____________________________*/
 .topnav {
@@ -72,7 +69,7 @@ input[type='button']:hover {
 .topnav a,
 .topnav span {
     padding: 14px 16px;
-    color: #e09f3e  ;
+    color: #e09f3e;
 }
 
 .topnav span {
@@ -87,13 +84,13 @@ input[type='button']:hover {
 }
 
 .topnav a:hover {
-    background-color: #9e2a2b  ;
-    color: #ffffff ;
+    background-color: #9e2a2b;
+    color: #ffffff;
 }
 
 .topnav a.active {
-    background-color: #540b0e  2b ;
-    color: #ffffff  ;
+    background-color: #540b0e 2b;
+    color: #ffffff;
 }
 
 .topnav .icon {
@@ -102,25 +99,25 @@ input[type='button']:hover {
 
 /* ______________________________ Sections ________________________________*/
 
-section {
+#section {
     min-height: 200px;
-    padding: 20px ;
+    padding: 20px;
 }
 
 footer {
     bottom: 0;
     width: 100%;
-    height: 200px;   /* Height of the footer */
+    height: 200px;
+    /* Height of the footer */
     background-color: #540b0e;
     text-align: center;
 }
 
-#edito{
+#edito {
     background-color: #540b0e;
 }
 
-#profil,
-#contact {
+#profil {
     background-color: #335c67;
     text-align: center;
 }
@@ -135,7 +132,7 @@ footer {
     background-color: transparent;
 }
 
-/* ______________________________ Caroussel ________________________________*/
+/* ______________________________ CAROUSSEL  ________________________________*/
 
 * {
     margin: 0;
@@ -148,7 +145,8 @@ footer {
     position: relative;
 }
 
-.Slider img {      /* Superposer les images les unes sur les autres */
+.Slider img {
+    /* Superposer les images les unes sur les autres */
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -157,13 +155,14 @@ footer {
     left: 0;
     opacity: 0;
     transition: opacity .5s;
-}  
+}
 
 .Slider img.active {
     opacity: 1;
 }
 
-.suivant, .precedent {
+.suivant,
+.precedent {
     color: #fff3b0;
     font-size: 6rem;
     position: absolute;
@@ -200,11 +199,11 @@ footer {
 }
 */
 
-fond noir avec transparence au hover 
-.prev:hover,
+fond noir avec transparence au hover .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 /*
 La légende 
 .text {
@@ -214,8 +213,8 @@ La légende
     text-align: center;
 }
 
-/* */les points de navigation 
-.dot {
+/* */
+les points de navigation .dot {
     color: rgb(255, 255, 255);
     font-size: 6rem;
     position: absolute;
@@ -224,7 +223,8 @@ La légende
 }
 
 
-.active,.dot:hover {
+.active,
+.dot:hover {
     background-color: #f50c0c;
 }
 
@@ -249,7 +249,7 @@ La légende
     margin: 16px;
 }
 
-.flip-box-inner {   
+.flip-box-inner {
     background-color: transparent;
     width: 100%;
     height: 100%;
@@ -278,8 +278,8 @@ La légende
 
 /* Style du recto */
 .flip-box-front {
-    background-color: #540b0e  ;
-    color: #100d0d  ;
+    background-color: #540b0e;
+    color: #100d0d;
 }
 
 /* Style du verso */
@@ -287,9 +287,9 @@ La légende
     background-color: #9e2a2b;
     color: #e09f3e;
     transform: rotateX(180deg);
-} */
+}
 
-footer {
+*/ footer {
     text-align: center;
 }
 
@@ -298,25 +298,149 @@ footer {
     margin: 25px;
 }
 
-/*________________________ Animation des icônes ___________________________*/
+/*________________________ Formulaire de contact ___________________________*/
+
+#contact {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-color: #9e2a2b;
+}
+
+.fond {
+    width: 80%;
+    display: inline-block;
+    margin: 2%;
+    margin-left: 10%;
+    text-align: center;
+    background-color: #335c67;
+    color: rgb(255, 255, 255);    /* COULEUR DU TEXTE */
+    border: 10px solid #fff3b0;  
+    border-radius: 3px;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+.fond h3 {
+    font-size: 3rem;
+    display: block;
+    margin: 2%;
+    margin-bottom: 0;
+}
+
+.lt {
+    padding: 2%;
+    margin: 2%;
+}
+
+.rt {
+    padding: 2%;
+    margin: 2%;
+}
+
+.lt textarea {
+    width: 90%;
+    margin-left: 3%;
+}
+
+button {
+    margin: 2%;
+}
+
+.btn-primary {                                      /* BOUTON ENVOYER */
+    background-color: #19ce16;  
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+.list-item {
+    margin-bottom: 2%;
+    list-style-type: none;
+}
+
+.list-item span {
+    margin-left: 10px;
+    font-size: 1.4rem;
+}
+
+.list-item a {
+    color: #fefffe;
+    display: inline-block;
+}
+
+.list-item a:hover {
+    text-decoration: underline;
+}
+
+/*.form-control {
+    background-color: #a7e018; /* Box de contact
+*/
+
+@media screen and (min-width: 770px) {
+    .fond {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .lt textarea {
+        width: 100%;
+        margin-left: 2.4%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .fond {
+        width: 65%;
+        margin-left: 17%;
+        margin-top: 5%;
+    }
+
+    .lt {
+        width: 55%;
+        display: inline-block;
+        float: left;   
+        margin-right: 0;
+    }
+
+    .rt {
+        width: 35%;
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    .list-item {
+        margin-bottom: 10%;
+    }
+
+    .contact-list {
+        margin-top: 22%;
+        padding-right: 8%;
+    }
+
+    .fa-envelope,
+    .gmail {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+/*________________________ RETOUR HAUT DE PAGE ___________________________*/
+
+#scrollUp
+{
+position: fixed;
+bottom : 10px;
+right: -100px;
+opacity: 0.8;
+}
+
+/*________________________ ANIMATION ICONES FOOTER ___________________________*/
 .fa-brands:hover,
 #arrow-up i:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
-}
+} 
 
-/* ----------------------------------------------
-   * Generated by Animista on 2022-10-4 16:9:13
-   * Licensed under FreeBSD License.
-   * See http://animista.net/license for more info. 
-   * w: http://animista.net, t: @cssanimista
-   * ---------------------------------------------- */
-
-/**
-   * ----------------------------------------
-   * animation heartbeat
-   * ----------------------------------------
-   */
 @-webkit-keyframes heartbeat {
     from {
         -webkit-transform: scale(1);
@@ -395,23 +519,6 @@ footer {
     }
 }
 
-#arrow-up {
-    display: block;
-    background: #e09f3e;
-    width: 50px;
-    height: 66px;
-    border-radius: 10px;
-    text-align: center;
-    padding-top: 8px;
-    position: sticky;
-    left: 95%;
-    bottom: 20px;
-}
-
-#arrow-up i {
-    color: white;
-}
-
 /* ___________________________ Media Queries ______________________________*/
 
 @media screen and (max-width: 768px) {
@@ -454,11 +561,6 @@ footer {
 
     .fa-brands {
         font-size: 3em;
-    }
-
-    #arrow-up {
-        left: 85%;
-        bottom: 15px;
     }
 
     td {

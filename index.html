@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />  
+    <link
+    rel="stylesheet"
+    href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -30,7 +37,7 @@
         <section id="profil">
             <img id="photo" src="images/Avatar1.png" alt="mon avatar" />
         </section>
-        <section id="edito" class="slideshow-container">
+        <section id="edito" class="Carousel">
 
             <!-------------    Le Carousel    ------------>
             <div class="Slider">
@@ -47,20 +54,20 @@
                 </div>
                 <div class="precedent">
                     <i class="fas fa-chevron-circle-left"></i>
-                </div>    
+                </div>
             </div>
             <script src="app.js"></script>
             <!-------------    Les points de navigation    ------------>
 
 
             <div style="text-align: center"></div>
-                
+
         </section>
         <section id="projets">
             <div class="flip-box" id="projet1">
                 <div class="flip-box-inner" style="background-image: url(images/chat1_c.jpg);">
-                    <div class="flip-box-front"style="background-image: url(images/chat1.jpg);"> 
-                        <h2>Projet 1</h2>  
+                    <div class="flip-box-front" style="background-image: url(images/chat1.jpg);">
+                        <h2>Projet 1</h2>
                     </div>
                     <div class="flip-box-back">
                         <h2>Description du projet</h2>
@@ -118,53 +125,77 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contactez nous</h2>
-            <form action="contact.php" method="post">
-                <table>
-                    <tr>
-                        <td><label for="firstname">Prénom :</label></td>
-                        <td>
-                            <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="lastname">Nom :</label></td>
-                        <td>
-                            <input type="text" name="lastname" id="lastname" placeholder="votre nom" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">Adresse mail :</label></td>
-                        <td>
-                            <input type="email" name="email" id="email" placeholder="Votre adresse mail"required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="objet">Objet du message :</label></td>
-                        <td>
-                            <input type="text" name="objet" id="objet" placeholder="Objet du message" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><label for="message">Votre message :</label></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input type="button" onclick="submit()" value="Envoyer" /></td>
-                    </tr>
-                </table>
-            </form>
-        </section>
     </main>
 
+    <section id="contact">
+        <!------    FORMULAIRE DE CONTACT   ------>
+        <div class="fond">
+            <h3>Contactez nous</h3>
+            <div class="lt">
+
+                <!------    DEBUT FORMULAIRE    ------>
+                <form class="form-horizontal" method="post" action="contact.php"></form>
+                <div class="form-group">   <!-- groupe de formulaires -->  
+                    <div class="col-sm-12">
+                        <!------    NOM    ------>
+                        <input type="text" class="form-control" id="NOM" placeholder="NOM" name="NOM" value="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <!------    EMAIL   ------>
+                        <input type="email" class="form-control" id="EMAIL" placeholder="EMAIL" name="EMAIL" value="" />
+                    </div>
+                </div>
+
+                <!------    MESSAGE    ------>
+                <textarea class="form-control" rows="11" placeholder="MESSAGE" name="MESSAGE">
+                    </textarea>
+
+                <button class="btn btn-primary send-button" id="submit" type="submit" value="ENVOYER">
+                    <i class="fa fa-paper-plane"></i>
+                    <span class="send-text">ENVOYER</span>
+                </button>
+                </form>
+                <!------    FIN DU FORMULAIRE   ------>
+            </div>
+
+            <!------    MES INFORMATIONS    ------>
+            <div class="rt">
+                <ul class="contact-list">
+                    <li class="list-item">
+                        <i class="fa fa-map-marker fa-1x">
+                            <span class="contact-text place">
+                                52 Champs Elysées
+                            </span>
+                        </i>
+                    </li>
+
+                    <li class="list-item">
+                        <i class="fa fa-envelope fa-1x">
+                            <span class="contact-text gmail">
+                                <a href="mailto:ons.fendri@efpedu.fr" title="Envoyez moi un e-mail">
+                                    ons.fendri@epfedu.fr</a>
+                            </span>
+                        </i>
+                    </li>
+
+                    <li class="list-item">
+                        <i class="fa fa-phone fa-1x">
+                            <span class="contact-text phone">
+                                (033) 612345678
+                            </span>
+                        </i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!------    FOOTER  ------>
     <footer>
-        <a href="https://www.facebook.com/" target="_blank" aria-label="icône facebook"><em
-            class="fa-brands fa-facebook fa-5x"></em></a>
+        <a href="https://www.facebook.com/" target="_red" aria-label="icône facebook"><em
+                class="fa-brands fa-facebook fa-5x"></em></a>
         <a href="https://www.twitter.com/" target="_blank" aria-label="icône twitter"><em
                 class="fa-brands fa-twitter fa-5x"></em></a>
         <a href="https://www.linkedin.com/" target="_blank" aria-label="icône linkedin"><em
@@ -172,8 +203,9 @@
         <a href="https://www.instagram.com/" target="_blank" aria-label="icône instagram"><em
                 class="fa-brands fa-instagram fa-5x"></em></a>
     </footer>
-    <div id="arrow-up">
-        <a href="#" aria-label="flèche top"><em class="fa-sharp fa-solid fa-arrow-up fa-3x"></em></a>
+    <!------   RETOUR EN HAUT DE PAGE  ------>
+    <div id="scrollUp">
+        <a href="#top"><img src="images/to_top.png"/></a>
     </div>
 </body>
 

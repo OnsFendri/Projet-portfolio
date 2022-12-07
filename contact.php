@@ -5,19 +5,29 @@
     <title>Contact</title>
 </head>
 <body>
-        <?php
-        if (isset ($_POST["message"])){
-        $message= " Ce message vous a été envoyé via la page de contact du site ProjetPortfolio
-        Nom :" . $_POST["firstname"]."
-        Email :". $_POST["email"]."
-        Message : ". $_POST["message"]:
+    <h1>Contactez-nous</h1>
+    <form method="post">
+        <label>Votre email</label>
+        <input type="email" name="email" required>
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+        <input type="submit">
+    </form>
+    <?php
+    if (isset($_POST['message'])) {
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: webmaster@monsite.fr' . "\r\n";
+        $entete .= 'Reply-to: ' . $_POST['email'];
 
-        $retour= mail("ons.fendri@epfedu.fr", $_POST["objet"], $message, 
-        "From: contact@portfolio.fr". "\r\n". "Reply-to:". $_POST["email"]);
-        if ($retour){
-            echo "<p>Votre message a bien été envoyé.</p>";
-        }
-        }
-        ?>
+        $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
+        <p><b>Email : </b>' . $_POST['email'] . '<br>
+        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
+
+        $retour = mail('destinataire@free.fr', 'Envoi depuis page Contact', $message, $entete);
+        if($retour)
+            echo '<p>Votre message a bien été envoyé.</p>';
+    }
+    ?>
 </body>
 </html>
