@@ -10,27 +10,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />  
-    <link
-    rel="stylesheet"
-    href=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <title>Portfolio</title>
+    <title>Portfolio Ons Fendri</title>
 </head>
 
 <body>
+    <!-------------    BARRE DE NAVIGATION   ------------>
     <header>
-        <nav id="myTopnav" class="topnav">
-            <span>Ons Fendri</span>
-            <a href="#profil">Accueil</a>
-            <a href="#edito">À propos</a>
-            <a href="#projets">Projets</a>
-            <a href="#contact">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="toogleResponsive()" aria-label="menu burger">
-                <em class="fa fa-bars"></em>
-            </a>
+        <nav class="navbar">
+            <a href="/" class="logo">Ons Fendri</a>
+
+            <div class="hamburger">
+                <!-- Les 3 lignes du menu burger-->
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+            <div class="nav_link">
+                <a href="#profil">Accueil</a>
+                <a href="#edito">A propos</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
     <main>
@@ -42,13 +47,15 @@
             <!-------------    LE CAROUSSEL   ------------>
             <div class="Slider">
                 <img src="images/chat1.jpg" alt="img1" class="img_Slider active" />
+
                 <img src="images/chat2.jpg" alt="img2" class="img_Slider" />
+                <p>Test image 1</p>
                 <img src="images/chat3.jpg" alt="img3" class="img_Slider" />
                 <img src="images/chat4.jpg" alt="img5" class="img_Slider" />
                 <img src="images/chat5.jpg" alt="img5" class="img_Slider" />
                 <img src="images/chat6.jpg" alt="img5" class="img_Slider" />
                 <img src="images/chat7.jpg" alt="img5" class="img_Slider" />
-
+                <!-------------    LES POINTS DE NAVIGATION   ------------>
                 <div class="suivant">
                     <i class="fas fa-chevron-circle-right"></i>
                 </div>
@@ -57,15 +64,15 @@
                 </div>
             </div>
             <script src="app.js"></script>
-            <!-------------    LES POINTS DE NAVIGATION   ------------>
+
 
 
             <div style="text-align: center"></div>
-
         </section>
+        <!-------------    LES PROJETS   ------------>
         <section id="projets">
             <div class="flip-box" id="projet1">
-                <div class="flip-box-inner" style="background-image: url(images/chat1_c.jpg);">
+                <div class="flip-box-inner">
                     <div class="flip-box-front" style="background-image: url(images/chat1.jpg);">
                         <h2>Projet 1</h2>
                     </div>
@@ -76,7 +83,7 @@
             </div>
             <div class="flip-box" id="projet2">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                    <div class="flip-box-front" style="background-image: url(images/chat2.jpg);">
                         <h2>Projet 2</h2>
                     </div>
                     <div class="flip-box-back">
@@ -86,7 +93,7 @@
             </div>
             <div class="flip-box" id="projet3">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                    <div class="flip-box-front" style="background-image: url(images/chat3.jpg);">
                         <h2>Projet 3</h2>
                     </div>
                     <div class="flip-box-back">
@@ -96,7 +103,7 @@
             </div>
             <div class="flip-box" id="projet4">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                    <div class="flip-box-front" style="background-image: url(images/chat4.jpg);">
                         <h2>Projet 4</h2>
                     </div>
                     <div class="flip-box-back">
@@ -106,7 +113,7 @@
             </div>
             <div class="flip-box" id="projet5">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                    <div class="flip-box-front" style="background-image: url(images/chat5.jpg);">
                         <h2>Projet 5</h2>
                     </div>
                     <div class="flip-box-back">
@@ -116,7 +123,7 @@
             </div>
             <div class="flip-box" id="projet6">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front">
+                    <div class="flip-box-front" style="background-image: url(images/chat6.jpg);">
                         <h2>Projet 6</h2>
                     </div>
                     <div class="flip-box-back">
@@ -126,16 +133,17 @@
             </div>
         </section>
     </main>
-
+    <!------    FORMULAIRE DE CONTACT   ------>
     <section id="contact">
-        <!------    FORMULAIRE DE CONTACT   ------>
         <div class="fond">
-            <h3>Contactez nous</h3>
+            <h3>Si vous aussi vous êtes fan de chat et souhaitez nous en dire un peu plus, envoyez nous un message !
+            </h3>
             <div class="lt">
 
                 <!------    DEBUT FORMULAIRE    ------>
                 <form class="form-horizontal" method="post" action="contact.php"></form>
-                <div class="form-group">   <!-- groupe de formulaires -->  
+                <div class="form-group">
+                    <!-- groupe de form -->
                     <div class="col-sm-12">
                         <!------    NOM    ------>
                         <input type="text" class="form-control" id="NOM" placeholder="NOM" name="NOM" value="" />
@@ -148,49 +156,22 @@
                         <input type="email" class="form-control" id="EMAIL" placeholder="EMAIL" name="EMAIL" value="" />
                     </div>
                 </div>
-
                 <!------    MESSAGE    ------>
-                <textarea class="form-control" rows="11" placeholder="MESSAGE" name="MESSAGE">
-                    </textarea>
+                <textarea class="form-control" name="message" id="message" placeholder="MESSAGE" cols="30"
+                    rows="11"></textarea>
 
-                <button class="btn btn-primary send-button" id="submit" type="submit" value="ENVOYER">
+                <!--<button class="btn btn-primary send-button" id="submit" type="submit" value="ENVOYER">
                     <i class="fa fa-paper-plane"></i>
                     <span class="send-text">ENVOYER</span>
-                </button>
+                </button>   -->
+                <button type="button" id="submit" type="submit" onclick="alert('Hello World!')">
+                    <i class="fa fa-paper-plane"></i>
+                    <span class="send-text"> ENVOYER</span>
+                </button>    
                 </form>
-                <!------    FIN DU FORMULAIRE   ------>
-            </div>
-
-            <!------    MES INFORMATIONS    ------>
-            <div class="rt">
-                <ul class="contact-list">
-                    <li class="list-item">
-                        <i class="fa fa-map-marker fa-1x">
-                            <span class="contact-text place">
-                                52 Champs Elysées
-                            </span>
-                        </i>
-                    </li>
-
-                    <li class="list-item">
-                        <i class="fa fa-envelope fa-1x">
-                            <span class="contact-text gmail">
-                                <a href="mailto:ons.fendri@efpedu.fr" title="Envoyez moi un e-mail">
-                                    ons.fendri@epfedu.fr</a>
-                            </span>
-                        </i>
-                    </li>
-
-                    <li class="list-item">
-                        <i class="fa fa-phone fa-1x">
-                            <span class="contact-text phone">
-                                (033) 612345678
-                            </span>
-                        </i>
-                    </li>
-                </ul>
             </div>
         </div>
+        <!------    FIN DU FORMULAIRE   ------>
     </section>
     <!------    FOOTER  ------>
     <footer>
@@ -198,14 +179,43 @@
                 class="fa-brands fa-facebook fa-5x"></em></a>
         <a href="https://www.twitter.com/" target="_blank" aria-label="icône twitter"><em
                 class="fa-brands fa-twitter fa-5x"></em></a>
-        <a href="https://www.linkedin.com/" target="_blank" aria-label="icône linkedin"><em
+        <a href="www.linkedin.com/in/ons-fendri/" target="_blank" aria-label="icône linkedin"><em
                 class="fa-brands fa-linkedin fa-5x"></em></a>
         <a href="https://www.instagram.com/" target="_blank" aria-label="icône instagram"><em
                 class="fa-brands fa-instagram fa-5x"></em></a>
+        <!------    MES INFORMATIONS    ------>
+        <!-- <div class="rt">
+            <ul class="contact-list">
+                <li class="list-item">
+                    <i class="fa fa-map-marker fa-1x">
+                        <span class="contact-text place">
+                            52 Champs Elysées
+                        </span>
+                    </i>
+                </li>
+
+                <li class="list-item">
+                    <i class="fa fa-envelope fa-1x">
+                        <span class="contact-text gmail">
+                            <a href="mailto:ons.fendri@efpedu.fr" title="Envoyez moi un e-mail">
+                                ons.fendri@epfedu.fr</a>
+                        </span>
+                    </i>
+                </li>
+
+                <li class="list-item">
+                    <i class="fa fa-phone fa-1x">
+                        <span class="contact-text phone">
+                            (033) 612345678
+                        </span>
+                    </i>
+                </li>
+            </ul>
+        </div>  -->
     </footer>
     <!------   RETOUR EN HAUT DE PAGE  ------>
     <div id="scrollUp">
-        <a href="#top"><img src="images/to_top.png"/></a>
+        <a href="#top"><img src="images/to_top.png" /></a>
     </div>
 </body>
 

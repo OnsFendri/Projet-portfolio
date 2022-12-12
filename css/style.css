@@ -1,12 +1,15 @@
 * {
+    /* Reset pour retirer les marges que google propose*/
     box-sizing: border-box;
     border: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    list-style: none;
 }
 
 html {
-    scroll-behavior: smooth;     /* Pour que le retour vers le haut de page soit fluide */
+    scroll-behavior: smooth;
+    /* Pour que le retour vers le haut de page soit fluide */
 }
 
 table {
@@ -50,51 +53,85 @@ input[type='button'] {
     padding: 10px;
 }
 
-/*input[type='button']:hover {
-    cursor: pointer;
-    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-    animation: heartbeat 1.5s ease-in-out infinite both;
-} */
+/* ___________________________ BARRE DE NAVIGATION ____________________________*/
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
 
-/* ___________________________ Menu responsive ____________________________*/
-.topnav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: #540b0e;
-    color: #3617a7;
-    overflow: hidden;
 }
 
-.topnav a,
-.topnav span {
-    padding: 14px 16px;
+/* nav styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    background-color: #540b0e;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #e09f3e;
+    padding-left: 20px;
+}
+
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.nav_link {
+    position: fixed;
+    width: 94%;
+    top: 5rem;
+    left: 18px;
+    background-color: #9e2a2b;
+}
+
+.nav_link a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
     color: #e09f3e;
 }
 
-.topnav span {
-    margin-right: 70%;
-}
-
-.topnav a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
+.nav_link a:hover {
     background-color: #9e2a2b;
-    color: #ffffff;
+    color: #e09f3e;
 }
 
-.topnav a.active {
-    background-color: #540b0e 2b;
-    color: #ffffff;
-}
-
-.topnav .icon {
+.hide {
     display: none;
+}
+
+@media screen and (min-width: 795px) {
+    .nav_link {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .nav_link a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
 
 /* ______________________________ SECTIONS ________________________________*/
@@ -102,15 +139,6 @@ input[type='button'] {
 #section {
     min-height: 200px;
     padding: 20px;
-}
-
-footer {
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-    /* Height of the footer */
-    background-color: #540b0e;
-    text-align: center;
 }
 
 #edito {
@@ -133,12 +161,6 @@ footer {
 }
 
 /* ______________________________ CAROUSSEL  ________________________________*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .Slider {
     height: 50vh;
@@ -181,55 +203,13 @@ footer {
     left: 1rem;
 }
 
-/* Boutons précédent et suivant 
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-*/
 
-fond noir avec transparence au hover .prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/*
-La légende 
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    text-align: center;
-}
-
-/* */
-les points de navigation .dot {
-    color: rgb(255, 255, 255);
-    font-size: 6rem;
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-}
-
-
-.active,
-.dot:hover {
+/*.dot:hover {
     background-color: #f50c0c;
-}
+} */
 
 
-/* _____________________________ Flip Boxes ________________________________*/
+/* _____________________________ FLIP BOXES ________________________________*/
 #projets {
     display: flex;
     justify-content: space-between;
@@ -244,9 +224,14 @@ les points de navigation .dot {
     background-color: transparent;
     width: 30%;
     min-height: 300px;
-    perspective: 1000px;
+    perspective: 1000px; 
     /* Pour l'effet 3D */
     margin: 16px;
+}
+
+.flip-box .images {
+    width : 150px;
+    height : 150px;
 }
 
 .flip-box-inner {
@@ -258,9 +243,10 @@ les points de navigation .dot {
     transform-style: preserve-3d;
 }
 
-/* Rotation vedrticale au hover */
+
+/* flip horizontal lorsqu'on quand passe la souris sur une flip box */
 .flip-box:hover .flip-box-inner {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 /* Positionnement des faces*/
@@ -286,10 +272,10 @@ les points de navigation .dot {
 .flip-box-back {
     background-color: #9e2a2b;
     color: #e09f3e;
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
-*/ footer {
+.footer {
     text-align: center;
 }
 
@@ -298,7 +284,7 @@ les points de navigation .dot {
     margin: 25px;
 }
 
-/*________________________ Formulaire de contact ___________________________*/
+/*________________________ FORMULAIRE DE CONTACT ___________________________*/
 
 #contact {
     width: 100%;
@@ -314,15 +300,16 @@ les points de navigation .dot {
     margin-left: 10%;
     text-align: center;
     background-color: #335c67;
-    color: rgb(255, 255, 255);    /* COULEUR DU TEXTE */
-    border: 10px solid #fff3b0;  
+    color: rgb(255, 255, 255);
+    /* COULEUR DU TEXTE */
+    border: 10px solid #fff3b0;
     border-radius: 3px;
     margin-bottom: 4%;
     margin-top: 4%;
 }
 
 .fond h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     display: block;
     margin: 2%;
     margin-bottom: 0;
@@ -340,32 +327,50 @@ les points de navigation .dot {
 
 .lt textarea {
     width: 90%;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 button {
     margin: 2%;
-}
-
-.btn-primary {                                      /* BOUTON ENVOYER */
-    background-color: #19ce16;  
+    background-color: #e09f3e;
     border: 1px solid white;
     border-radius: 5%;
+
+}
+
+
+/*________________________ FOOTER ___________________________*/
+
+footer {
+    padding: 50px 0;
+    ;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #540b0e;
+    text-align: center;
 }
 
 .list-item {
     margin-bottom: 2%;
     list-style-type: none;
+    /* Pour retirer les points de listes */
 }
 
 .list-item span {
+    /* Les 3 phrases de contact */
     margin-left: 10px;
     font-size: 1.4rem;
 }
 
 .list-item a {
+    /* Couleur du mail lorsqu'on ne passe pas la souris dessus */
     color: #fefffe;
     display: inline-block;
+}
+
+.contact-list {
+    color: white;
 }
 
 .list-item a:hover {
@@ -375,6 +380,8 @@ button {
 /*.form-control {
     background-color: #a7e018; /* Box de contact
 */
+
+
 
 @media screen and (min-width: 770px) {
     .fond {
@@ -398,7 +405,7 @@ button {
     .lt {
         width: 55%;
         display: inline-block;
-        float: left;   
+        float: left;
         margin-right: 0;
     }
 
@@ -426,12 +433,11 @@ button {
 
 /*________________________ RETOUR HAUT DE PAGE ___________________________*/
 
-#scrollUp
-{
-position: fixed;
-bottom : 10px;
-right: -100px;
-opacity: 0.8;
+#scrollUp {
+    position: fixed;
+    bottom: 10px;
+    right: -100px;
+    opacity: 0.8;
 }
 
 /*________________________ ANIMATION ICONES FOOTER ___________________________*/
@@ -439,7 +445,7 @@ opacity: 0.8;
 #arrow-up i:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
-} 
+}
 
 @-webkit-keyframes heartbeat {
     from {
@@ -520,47 +526,20 @@ opacity: 0.8;
 }
 
 /* ___________________________ Media Queries ______________________________*/
-
+/* Permettent de changer modifier l'apparence d'un site en fonction du type d'appareil -> pour réaliser la partie responsive */
 @media screen and (max-width: 768px) {
-    .topnav {
-        display: block;
-    }
-
-    .topnav span,
-    .topnav a:not(:nth-child(2)) {
-        display: none;
-    }
-
-    .topnav a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: block;
-    }
-
     .flip-box {
         width: 94%;
         justify-content: center;
     }
 
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: center;
-    }
-
     .fa-brands {
         font-size: 3em;
+    }
+
+    #arrow-up {
+        left: 85%;
+        bottom: 15px;
     }
 
     td {
@@ -580,14 +559,5 @@ opacity: 0.8;
     .flip-box {
         width: 45%;
     }
-
-    .topnav span {
-        margin-right: 30%;
-    }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1850px) {
-    .topnav span {
-        margin-right: 50%;
-    }
-}
