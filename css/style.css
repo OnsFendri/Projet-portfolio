@@ -12,26 +12,12 @@ html {
     /* Pour que le retour vers le haut de page soit fluide */
 }
 
-td {
-    width: 50%;
-    padding: 5px;
-    margin: 5px;
-    line-height: 1.5em;
-}
-
-/*tr:last-child {
-    text-align: center;
-} */
-
-
-
 /* ______________________________ SECTIONS ________________________________*/
 
 #section {
     min-height: 200px;
     padding: 20px;
 }
-
 
 #edito {
     background-color: #540b0e;
@@ -59,7 +45,6 @@ a {
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
-
 }
 
 .navbar {
@@ -113,25 +98,6 @@ a {
     display: none;
 }
 
-@media screen and (min-width: 795px) {
-    .nav_link {
-        display: block;
-        position: static;
-        width: auto;
-        margin-right: 20px;
-        background: none;
-    }
-
-    .nav_link a {
-        display: inline-block;
-        padding: 15px 20px;
-    }
-
-    .hamburger {
-        display: none;
-    }
-}
-
 
 /* ______________________________ CAROUSSEL  ________________________________*/
 
@@ -158,11 +124,6 @@ a {
     opacity: 1;
 }
 
-
-.Slider .slider {
-    display: none;
-}
-
 .suivant,
 .precedent {
     color: black;
@@ -183,8 +144,8 @@ a {
     left: 1rem;
 }
 
-/* _____________________________ FLIP BOXES ________________________________*/
-#projets {
+/* _____________________________ LES PRODUITS ________________________________*/
+#produits {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -218,15 +179,15 @@ a {
     transform-style: preserve-3d;
 }
 
-
-/* flip horizontal lorsqu'on quand passe la souris sur une flip box */
 .flip-box:hover .flip-box-inner {
+    /* flip horizontal lorsqu'on quand passe la souris dessus */
     transform: rotateY(180deg);
 }
 
-/* Positionnement des faces*/
+
 .flip-box-front,
 .flip-box-back {
+    /* Positionnement des faces*/
     position: absolute;
     width: 100%;
     height: 100%;
@@ -256,11 +217,6 @@ a {
 .fa-brands {
     color: #fff3b0;
     margin: 25px;
-}
-
-a .amazon {
-    color: white;
-    font-size: larger;
 }
 
 /*________________________ FORMULAIRE DE CONTACT ___________________________*/
@@ -328,12 +284,6 @@ footer {
     font-weight: bold;
 }
 
-.rt {
-    padding: 0%;
-    margin: -2%;
-}
-
-
 /*________________________ RETOUR HAUT DE PAGE ___________________________*/
 
 #scrollUp {
@@ -348,45 +298,6 @@ footer {
 .fa-brands:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
-}
-
-@-webkit-keyframes heartbeat {
-    from {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-transform-origin: center center;
-        transform-origin: center center;
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    10% {
-        -webkit-transform: scale(0.91);
-        transform: scale(0.91);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    17% {
-        -webkit-transform: scale(0.98);
-        transform: scale(0.98);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    33% {
-        -webkit-transform: scale(0.87);
-        transform: scale(0.87);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    45% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
 }
 
 @keyframes heartbeat {
@@ -456,10 +367,6 @@ footer {
     .Slider {
         display: none;
     }
-
-    .Slider .slider {
-        display: flex;
-    }
 }
 
 @media screen and (min-width: 540px) and (max-width: 768px) {
@@ -472,5 +379,24 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .flip-box {
         width: 45%;
+    }
+}
+
+@media screen and (min-width: 795px) {
+    .nav_link {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .nav_link a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
