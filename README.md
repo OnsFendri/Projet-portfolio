@@ -12,7 +12,7 @@ Réaliser une page Web statique en HTML/CSS respectueuse des wireframes propors�
 responsive au regard de différents supports (Ordinateurs, tablettes ou smartphones) et étant conforme avex les standards du WEB.
 
 
-Ma page web représente ...
+Ma page web représente un site pour une marque de loisirs créatifs qui vend des produits en ligne et propose des ateliers.
 
 
 Elle a été réalisée en HTML/CSS mais également en JAVASCRIPT pour certaines fonctionnalités telles que le Caroussel, la barre de navigation 
