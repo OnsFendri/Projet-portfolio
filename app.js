@@ -1,3 +1,4 @@
+
 /* SLIDER */
 let img_Slider = document.getElementsByClassName('img_Slider');
 let etape = 0;
@@ -38,7 +39,7 @@ setInterval(function () {
     }
     enleverActiveImages();
     img_Slider[etape].classList.add('active');
-}, 3000)
+}, 5000)
 
 
 /* SCROLL UP */

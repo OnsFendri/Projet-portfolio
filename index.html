@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <title>Portfolio Ons Fendri</title>
 </head>
 
 <body>
-    <!-------------    BARRE DE NAVIGATION   ------------>
+    <!--    BARRE DE NAVIGATION   -->
     <header>
         <nav class="navbar">
             <a href="/" class="logo">Ons Fendri</a>
@@ -39,143 +39,148 @@
         </nav>
     </header>
     <main>
-        <section id="profil">
+        <div id="profil" title="profil">
             <img id="photo" src="images/Avatar1.png" alt="mon avatar" />
-        </section>
-        <section id="edito" class="Carousel">
-
-            <!-------------    LE CAROUSSEL   ------------>
+        </div>
+        <section id="edito" class="Carousel"> <!--    LE CAROUSSEL   -->
             <div class="Slider">
-                <img src="images/chat1.jpg" alt="img1" class="img_Slider active" />
-
-                <img src="images/chat2.jpg" alt="img2" class="img_Slider" />
-                <p>Test image 1</p>
-                <img src="images/chat3.jpg" alt="img3" class="img_Slider" />
-                <img src="images/chat4.jpg" alt="img5" class="img_Slider" />
-                <img src="images/chat5.jpg" alt="img5" class="img_Slider" />
-                <img src="images/chat6.jpg" alt="img5" class="img_Slider" />
-                <img src="images/chat7.jpg" alt="img5" class="img_Slider" />
-                <!-------------    LES POINTS DE NAVIGATION   ------------>
+                <img src="images/Caroussel1.png" alt="img1" class="img_Slider active" />
+                <img src="images/Caroussel2.png" alt="img2" class="img_Slider" />
+                <img src="images/Caroussel3.png" alt="img3" class="img_Slider" />
+                <img src="images/Caroussel4.png" alt="img4" class="img_Slider" />
+                <img src="images/Caroussel5.png" alt="img5" class="img_Slider" />
+                <!--    LES POINTS DE NAVIGATION   -->
                 <div class="suivant">
                     <i class="fas fa-chevron-circle-right"></i>
                 </div>
                 <div class="precedent">
                     <i class="fas fa-chevron-circle-left"></i>
                 </div>
+                <div class="slider">
+                    <h2>Créa'loi est une marque de produits de loisirs créatifs</h2>
+                </div>
             </div>
+
             <script src="app.js"></script>
-
-
-
-            <div style="text-align: center"></div>
         </section>
-        <!-------------    LES PROJETS   ------------>
-        <section id="projets">
+        <section id="projets"> <!--    LES PROJETS   -->
             <div class="flip-box" id="projet1">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="background-image: url(images/chat1.jpg);">
-                        <h2>Projet 1</h2>
+                    <div class="flip-box-front" style="background-image: url(images/Produit11.png);">
+                        <h2>Peinture acrylique</h2>
                     </div>
                     <div class="flip-box-back">
-                        <h2>Description du projet</h2>
+                        <a href="https://www.amazon.fr/ANSTA-Peinture-Acrylique-Couleur-Taille/dp/B0BMFRQGNG/ref=sr_1_2_sspa?keywords=peinture+acrylique&qid=1670891753&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                            target="_blank" aria-label="amazon" style="color:#e09f3e">Lot de 3 tubes de peinture
+                            acrylique, idéal pour débuter
+                            Prix : 15€</a>
                     </div>
                 </div>
             </div>
             <div class="flip-box" id="projet2">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="background-image: url(images/chat2.jpg);">
-                        <h2>Projet 2</h2>
+                    <div class="flip-box-front" style="background-image: url(images/Produit22.png);">
+                        <h2>Argile auto-durcissante</h2>
                     </div>
                     <div class="flip-box-back">
-                        <h2>Description du projet</h2>
+                        <a href="https://www.amazon.fr/Argile-auto-durcissante-Blanc-1-kg/dp/B085YC9K2Q/ref=sr_1_6?keywords=argile+autodurcissante&qid=1670891797&sprefix=argi%2Caps%2C113&sr=8-6"
+                            target="_blank" aria-label="amazon" style="color:#e09f3e">2kg d'argile auto-durcissante,
+                            pour réaliser des mugs ou petites coupelles
+                            Prix : 15€</a>
                     </div>
                 </div>
             </div>
             <div class="flip-box" id="projet3">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="background-image: url(images/chat3.jpg);">
-                        <h2>Projet 3</h2>
+                    <div class="flip-box-front" style="background-image: url(images/Produit33.png);">
+                        <h2>Toiles de peinture</h2>
                     </div>
                     <div class="flip-box-back">
-                        <h2>Description du projet</h2>
+                        <a href="https://www.amazon.fr/Lot-Toile-Peindre-30x40cm-Acrylique/dp/B08729Q8CF/ref=sr_1_1_sspa?keywords=toile+de+peinture&qid=1670892021&sprefix=toile+de+p%2Caps%2C181&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                            target="_blank" aria-label="amazon" style="color:#e09f3e">Lot de 3 toiles de peinture de
+                            différentes
+                            tailles pour tout type de peinture
+                            Prix : 20€</a>
                     </div>
                 </div>
             </div>
             <div class="flip-box" id="projet4">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="background-image: url(images/chat4.jpg);">
-                        <h2>Projet 4</h2>
+                    <div class="flip-box-front" style="background-image: url(images/Produit44.png);">
+                        <h2>Lots de pinceaux</h2>
                     </div>
                     <div class="flip-box-back">
-                        <h2>Description du projet</h2>
+                        <a href="https://www.amazon.fr/Pi%C3%A8ces-Pinceaux-Peinture-Acrylique-Aquarelle/dp/B09YCRRCG3/ref=sr_1_7?keywords=lot+pinceaux+peinture&qid=1670892461&sprefix=lot+pinceau%2Caps%2C143&sr=8-7"
+                            target="_blank" aria-label="amazon" style="color:#e09f3e">Le kit de pinceaux qu'il vous faut
+                            Prix : 10€</a>
                     </div>
                 </div>
             </div>
             <div class="flip-box" id="projet5">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="background-image: url(images/chat5.jpg);">
-                        <h2>Projet 5</h2>
+                    <div class="flip-box-front" style="background-image: url(images/Produit55.png);">
+                        <h2>Papiers dessin</h2>
                     </div>
                     <div class="flip-box-back">
-                        <h2>Description du projet</h2>
+                        <a href="https://www.amazon.fr/MarpaJansen-feuilles-papier-dessin-couleurs/dp/B08KD2VHC2/ref=sr_1_3_sspa?keywords=papiers+dessin&qid=1670892738&sprefix=papiers+de%2Caps%2C121&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                            target="_blank" aria-label="amazon" style="color:#e09f3e">Papiers pour dessiner, parfait
+                            pour les croquis, mais aussi pour la peinnture et l'aquarelle
+                            Prix : 10€</a>
                     </div>
                 </div>
             </div>
             <div class="flip-box" id="projet6">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="background-image: url(images/chat6.jpg);">
-                        <h2>Projet 6</h2>
+                    <div class="flip-box-front" style="background-image: url(images/Produit66.png);">
+                        <h2>Bombes de peinture</h2>
                     </div>
                     <div class="flip-box-back">
-                        <h2>Description du projet</h2>
+                        <a href="https://www.amazon.fr/peinture-a%C3%A9rosol-graffiti-s%C3%A9chage-d%C3%A9coration/dp/B0B9YJQK1H/ref=sr_1_1_sspa?keywords=bombe+de+peinture&qid=1670893059&sprefix=bombe+de+pe%2Caps%2C141&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                            target="_blank" aria-label="amazon" style="color:#e09f3e">3 Bombes de peinture pour
+                            réveiller le rebèle qui sommmeil en vous !
+                            Prix : 15€</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <!------    FORMULAIRE DE CONTACT   ------>
+    <!--    FORMULAIRE DE CONTACT   -->
     <section id="contact">
         <div class="fond">
-            <h3>Si vous aussi vous êtes fan de chat et souhaitez nous en dire un peu plus, envoyez nous un message !
+            <h3>Si tu souhaites t'inscrire à l'un de nos ateliers, fais le nous savoir en remplissant ce formulaire !
             </h3>
             <div class="lt">
-
-                <!------    DEBUT FORMULAIRE    ------>
-                <form class="form-horizontal" method="post" action="contact.php"></form>
-                <div class="form-group">
-                    <!-- groupe de form -->
-                    <div class="col-sm-12">
-                        <!------    NOM    ------>
-                        <input type="text" class="form-control" id="NOM" placeholder="NOM" name="NOM" value="" />
+                <!--    DEBUT FORMULAIRE    -->
+                <form class="form-horizontal" method="post" action="contact.php">
+                    <div class="form-group">
+                        <!-- groupe de form -->
+                        <div class="col-sm-12">
+                            <!--    NOM    -->
+                            <input type="text" class="form-control" id="NOM" placeholder="NOM" name="NOM" value="" />
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <!------    EMAIL   ------>
-                        <input type="email" class="form-control" id="EMAIL" placeholder="EMAIL" name="EMAIL" value="" />
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <!--    EMAIL   -->
+                            <input type="email" class="form-control" id="EMAIL" placeholder="EMAIL" name="EMAIL"
+                                value="" />
+                        </div>
                     </div>
-                </div>
-                <!------    MESSAGE    ------>
-                <textarea class="form-control" name="message" id="message" placeholder="MESSAGE" cols="30"
-                    rows="11"></textarea>
-
-                <!--<button class="btn btn-primary send-button" id="submit" type="submit" value="ENVOYER">
-                    <i class="fa fa-paper-plane"></i>
-                    <span class="send-text">ENVOYER</span>
-                </button>   -->
-                <button type="button" id="submit" type="submit" onclick="alert('Hello World!')">
-                    <i class="fa fa-paper-plane"></i>
-                    <span class="send-text"> ENVOYER</span>
-                </button>    
+                    <!--    MESSAGE    -->
+                    <textarea class="form-control" name="message" id="message" placeholder="MESSAGE" cols="30"
+                        rows="11"></textarea>
+                    <button type="button" id="submit" onclick="alert('Votre message a bien été envoyé !')">
+                        <i class="fa fa-paper-plane"></i>
+                        <span class="send-text"> ENVOYER</span>
+                    </button>
                 </form>
             </div>
         </div>
-        <!------    FIN DU FORMULAIRE   ------>
+        <!--    FIN DU FORMULAIRE   -->
     </section>
-    <!------    FOOTER  ------>
+    <!--    FOOTER  -->
     <footer>
-        <a href="https://www.facebook.com/" target="_red" aria-label="icône facebook"><em
+        <a href="https://www.facebook.com/" target="_blank" aria-label="icône facebook"><em
                 class="fa-brands fa-facebook fa-5x"></em></a>
         <a href="https://www.twitter.com/" target="_blank" aria-label="icône twitter"><em
                 class="fa-brands fa-twitter fa-5x"></em></a>
@@ -183,39 +188,12 @@
                 class="fa-brands fa-linkedin fa-5x"></em></a>
         <a href="https://www.instagram.com/" target="_blank" aria-label="icône instagram"><em
                 class="fa-brands fa-instagram fa-5x"></em></a>
-        <!------    MES INFORMATIONS    ------>
-        <!-- <div class="rt">
-            <ul class="contact-list">
-                <li class="list-item">
-                    <i class="fa fa-map-marker fa-1x">
-                        <span class="contact-text place">
-                            52 Champs Elysées
-                        </span>
-                    </i>
-                </li>
-
-                <li class="list-item">
-                    <i class="fa fa-envelope fa-1x">
-                        <span class="contact-text gmail">
-                            <a href="mailto:ons.fendri@efpedu.fr" title="Envoyez moi un e-mail">
-                                ons.fendri@epfedu.fr</a>
-                        </span>
-                    </i>
-                </li>
-
-                <li class="list-item">
-                    <i class="fa fa-phone fa-1x">
-                        <span class="contact-text phone">
-                            (033) 612345678
-                        </span>
-                    </i>
-                </li>
-            </ul>
-        </div>  -->
+        <p>Nous sommes présents sur les réseaux sociaux !!!<br>
+        </p>
     </footer>
-    <!------   RETOUR EN HAUT DE PAGE  ------>
+    <!--  RETOUR EN HAUT DE PAGE  -->
     <div id="scrollUp">
-        <a href="#top"><img src="images/to_top.png" /></a>
+        <a href="#top"><img src="images/to_top.png" alt="to_top" /></a>
     </div>
 </body>
 

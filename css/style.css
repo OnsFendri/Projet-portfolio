@@ -1,25 +1,15 @@
 * {
-    /* Reset pour retirer les marges que google propose*/
+    /* Reset pour retirer les marges que le moteur de recherche propose*/
     box-sizing: border-box;
     border: 0;
     margin: 0;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     list-style: none;
 }
 
 html {
     scroll-behavior: smooth;
     /* Pour que le retour vers le haut de page soit fluide */
-}
-
-table {
-    width: 80%;
-    margin: auto;
-    padding: 10px;
-    border-radius: 10px;
-    color: rgb#fafdfd;
-    background: #e09f3e;
-    border: 5px solid white;
 }
 
 td {
@@ -29,40 +19,47 @@ td {
     line-height: 1.5em;
 }
 
-tr:last-child {
+/*tr:last-child {
+    text-align: center;
+} */
+
+
+
+/* ______________________________ SECTIONS ________________________________*/
+
+#section {
+    min-height: 200px;
+    padding: 20px;
+}
+
+
+#edito {
+    background-color: #540b0e;
+}
+
+#profil {
+    background-color: #335c67;
     text-align: center;
 }
 
-textarea {
-    width: 100%;
-    max-width: 100%;
-}
-
-input {
-    width: 100%;
-    height: 3em;
-}
-
-input[type='button'] {
-    width: 250px;
+#photo {
+    display: block;
     margin: auto;
-    color: rgb(5, 5, 5);
-    border: 5px solid white;
-    background: #fff3b0;
-    border-radius: 5px;
-    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff3b0;
+    background-color: transparent;
 }
 
 /* ___________________________ BARRE DE NAVIGATION ____________________________*/
 a {
     text-decoration: none;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 
 }
-
-/* nav styles */
 
 .navbar {
     display: flex;
@@ -134,42 +131,19 @@ a {
     }
 }
 
-/* ______________________________ SECTIONS ________________________________*/
-
-#section {
-    min-height: 200px;
-    padding: 20px;
-}
-
-#edito {
-    background-color: #540b0e;
-}
-
-#profil {
-    background-color: #335c67;
-    text-align: center;
-}
-
-#photo {
-    display: block;
-    margin: auto;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #fff3b0;
-    background-color: transparent;
-}
 
 /* ______________________________ CAROUSSEL  ________________________________*/
 
 .Slider {
-    height: 50vh;
+    height: 60vh;
     position: relative;
+    border: 15px solid white;
 }
 
 .Slider img {
     /* Superposer les images les unes sur les autres */
     object-fit: cover;
+    /*Les images couvres la section*/
     height: 100%;
     width: 100%;
     position: absolute;
@@ -183,9 +157,14 @@ a {
     opacity: 1;
 }
 
+
+.Slider .slider {
+    display: none;
+}
+
 .suivant,
 .precedent {
-    color: #fff3b0;
+    color: black;
     font-size: 6rem;
     position: absolute;
     top: 50%;
@@ -203,12 +182,6 @@ a {
     left: 1rem;
 }
 
-
-/*.dot:hover {
-    background-color: #f50c0c;
-} */
-
-
 /* _____________________________ FLIP BOXES ________________________________*/
 #projets {
     display: flex;
@@ -222,16 +195,17 @@ a {
 
 .flip-box {
     background-color: transparent;
+    object-fit: cover;
     width: 30%;
     min-height: 300px;
-    perspective: 1000px; 
+    perspective: 1000px;
     /* Pour l'effet 3D */
     margin: 16px;
 }
 
 .flip-box .images {
-    width : 150px;
-    height : 150px;
+    width: 150px;
+    height: 150px;
 }
 
 .flip-box-inner {
@@ -262,26 +236,30 @@ a {
     backface-visibility: hidden;
 }
 
-/* Style du recto */
 .flip-box-front {
-    background-color: #540b0e;
-    color: #100d0d;
+    /* Recto */
+    background-color: #9e2a2b;
+    color: black;
 }
 
-/* Style du verso */
 .flip-box-back {
+    /* Verso */
     background-color: #9e2a2b;
     color: #e09f3e;
     transform: rotateY(180deg);
-}
-
-.footer {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-brands {
     color: #fff3b0;
     margin: 25px;
+}
+
+a .amazon {
+    color: white;
+    font-size: larger;
 }
 
 /*________________________ FORMULAIRE DE CONTACT ___________________________*/
@@ -303,7 +281,7 @@ a {
     color: rgb(255, 255, 255);
     /* COULEUR DU TEXTE */
     border: 10px solid #fff3b0;
-    border-radius: 3px;
+    border-radius: 15px;
     margin-bottom: 4%;
     margin-top: 4%;
 }
@@ -320,11 +298,6 @@ a {
     margin: 2%;
 }
 
-.rt {
-    padding: 2%;
-    margin: 2%;
-}
-
 .lt textarea {
     width: 90%;
     margin-left: 5%;
@@ -332,10 +305,11 @@ a {
 
 button {
     margin: 2%;
+    padding: 15px 30px;
+    text-align: center;
     background-color: #e09f3e;
     border: 1px solid white;
-    border-radius: 5%;
-
+    border-radius: 15%;
 }
 
 
@@ -343,93 +317,21 @@ button {
 
 footer {
     padding: 50px 0;
-    ;
     bottom: 0;
     width: 100%;
     height: 250px;
     background-color: #540b0e;
     text-align: center;
-}
-
-.list-item {
-    margin-bottom: 2%;
-    list-style-type: none;
-    /* Pour retirer les points de listes */
-}
-
-.list-item span {
-    /* Les 3 phrases de contact */
-    margin-left: 10px;
-    font-size: 1.4rem;
-}
-
-.list-item a {
-    /* Couleur du mail lorsqu'on ne passe pas la souris dessus */
-    color: #fefffe;
-    display: inline-block;
-}
-
-.contact-list {
     color: white;
+    font-size: larger;
+    font-weight: bold;
 }
 
-.list-item a:hover {
-    text-decoration: underline;
+.rt {
+    padding: 0%;
+    margin: -2%;
 }
 
-/*.form-control {
-    background-color: #a7e018; /* Box de contact
-*/
-
-
-
-@media screen and (min-width: 770px) {
-    .fond {
-        width: 70%;
-        margin-left: 15%;
-    }
-
-    .lt textarea {
-        width: 100%;
-        margin-left: 2.4%;
-    }
-}
-
-@media screen and (min-width: 1100px) {
-    .fond {
-        width: 65%;
-        margin-left: 17%;
-        margin-top: 5%;
-    }
-
-    .lt {
-        width: 55%;
-        display: inline-block;
-        float: left;
-        margin-right: 0;
-    }
-
-    .rt {
-        width: 35%;
-        display: inline-block;
-        margin-left: 0;
-    }
-
-    .list-item {
-        margin-bottom: 10%;
-    }
-
-    .contact-list {
-        margin-top: 22%;
-        padding-right: 8%;
-    }
-
-    .fa-envelope,
-    .gmail {
-        display: inline-block;
-        width: auto;
-    }
-}
 
 /*________________________ RETOUR HAUT DE PAGE ___________________________*/
 
@@ -441,8 +343,8 @@ footer {
 }
 
 /*________________________ ANIMATION ICONES FOOTER ___________________________*/
-.fa-brands:hover,
-#arrow-up i:hover {
+
+.fa-brands:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
 }
@@ -525,8 +427,11 @@ footer {
     }
 }
 
-/* ___________________________ Media Queries ______________________________*/
-/* Permettent de changer modifier l'apparence d'un site en fonction du type d'appareil -> pour réaliser la partie responsive */
+/* ___________________________ MEDIA QUERIES ______________________________*/
+
+/* Permettent de changer modifier l'apparence d'un site en fonction du type d'appareil
+-> pour réaliser la partie responsive */
+
 @media screen and (max-width: 768px) {
     .flip-box {
         width: 94%;
@@ -546,6 +451,14 @@ footer {
         display: block;
         width: 96%;
     }
+
+    .Slider {
+        display: none;
+    }
+
+    .Slider .slider {
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 540px) and (max-width: 768px) {
@@ -560,4 +473,3 @@ footer {
         width: 45%;
     }
 }
-
