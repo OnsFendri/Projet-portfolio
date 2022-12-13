@@ -51,14 +51,15 @@
                 <img src="images/Caroussel5.png" alt="img5" class="img_Slider" />
                 <!--    LES POINTS DE NAVIGATION   -->
                 <div class="suivant">
-                    <i class="fas fa-chevron-circle-right"></i>
+                    <em class="fas fa-chevron-circle-right"></em>
                 </div>
                 <div class="precedent">
-                    <i class="fas fa-chevron-circle-left"></i>
+                    <em class="fas fa-chevron-circle-left"></em>
                 </div>
             </div>
 
             <script src="app.js"></script>
+            <noscript>Alternate content for script</noscript>
         </section>
         <section id="produits"> <!--    LES PRODUITS   -->
             <div class="flip-box" id="produit1">
@@ -153,21 +154,24 @@
                         <!-- groupe de form -->
                         <div class="col-sm-12">
                             <!--    NOM    -->
-                            <input type="text" class="form-control" id="NOM" placeholder="NOM" name="NOM" value="" />
+                            <label for="NOM">Nom</label>
+                            <input type="text" class="form-control" id="NOM" placeholder="NOM" name="NOM" title="Nom" />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
                             <!--    EMAIL   -->
+                            <label for="EMAIL">Email</label>
                             <input type="email" class="form-control" id="EMAIL" placeholder="EMAIL" name="EMAIL"
-                                value="" />
+                                title="Email" />
                         </div>
                     </div>
                     <!--    MESSAGE    -->
+                    <label for="message">message</label>
                     <textarea class="form-control" name="message" id="message" placeholder="MESSAGE" cols="30"
                         rows="11"></textarea>
                     <button type="button" id="submit" onclick="alert('Votre message a bien été envoyé !')">
-                        <i class="fa fa-paper-plane"></i>
+                        <em class="fa fa-paper-plane"></em>
                         <span class="send-text"> ENVOYER</span>
                     </button>
                 </form>
